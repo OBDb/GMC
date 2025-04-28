@@ -436,6 +436,24 @@
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "4240"}, "freq": 10,
   "signals": [
     {"id": "GMC_HVBAT_CMU96_VOLT", "path": "Battery.Modules.96", "fmt": { "len": 16, "max": 5, "mul": 5, "div": 65535, "unit": "volts" }, "name": "HV battery module 96 voltage"}
+  ]},
+{ "hdr": "DA1D", "dbg": true, "cmd": {"22": "33E5"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_HVBAT_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "DMCM battery voltage", "description": "From the Drive Motor Control Module."}
+  ]},
+{ "hdr": "DACB", "dbg": true, "cmd": {"22": "27C6"}, "freq": 0.5,
+  "signals": [
+    {"id": "GMC_SOC_HD", "path": "Battery", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "SoC (high res)", "suggestedMetric": "stateOfCharge", "description": "A high resolution measure of the battery pack's remaining state of charge."}
+  ]},
+{ "hdr": "DACB", "dbg": true, "cmd": {"22": "2AF5"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_HVBAT_C_V_AVG", "path": "Battery", "fmt": {           "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage (avg)"},
+    {"id": "GMC_HVBAT_C_V_MIN", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage (min)"},
+    {"id": "GMC_HVBAT_C_V_MAX", "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage (max)"}
+  ]},
+{ "hdr": "DACB", "dbg": true, "cmd": {"22": "2B43"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "SoC", "suggestedMetric": "stateOfCharge"}
   ]}
 ]
 }
