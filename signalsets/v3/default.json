@@ -526,7 +526,7 @@
   ]},
 { "hdr": "DA11", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "153E"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOT", "path": "Engine", "fmt": { "len": 8, "max": 225, "add": -30, "unit": "celsius" }, "name": "Engine oil temperature"}
+    {"id": "GMC_EOT", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"}
   ]},
 { "hdr": "DA11", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20E3"}, "freq": 1,
   "signals": [
@@ -554,7 +554,7 @@
   ]},
 { "hdr": "DA18", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1940"}, "freq": 1,
   "signals": [
-    {"id": "GMC_TFT", "path": "Engine", "fmt": { "len": 8, "max": 225, "add": -30, "unit": "celsius" }, "name": "Transmission fluid temperature"}
+    {"id": "GMC_TFT", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature"}
   ]},
 { "hdr": "DA18", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1B30"}, "freq": 0.25,
   "signals": [
@@ -573,7 +573,7 @@
         }}
     }
   ]},
-{ "hdr": "DA1A", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "448F"}, "freq": 1, "filter": { "to": 2024 },
+{ "hdr": "DA1A", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "448F"}, "freq": 1, "filter": { "to": 2025 },
   "signals": [
     {"id": "GMC_ODO", "path": "Trips", "fmt": { "len": 32, "max": 1000000, "mul": 156.25, "div": 10000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
