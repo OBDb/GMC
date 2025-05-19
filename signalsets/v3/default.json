@@ -559,10 +559,17 @@
 { "hdr": "DA18", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1B30"}, "freq": 0.25,
   "signals": [
     {"id": "GMC_GEAR", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
-          "1": { "description": "Neutral", "value": "NEUTRAL" },
-          "2": { "description": "Park",    "value": "PARK" },
-          "3": { "description": "Reverse", "value": "REVERSE" },
-          "4": { "description": "Drive",   "value": "DRIVE" }
+          "1":  { "description": "Neutral",       "value": "NEUTRAL" },
+          "2":  { "description": "Park",          "value": "PARK" },
+          "3":  { "description": "Reverse",       "value": "REVERSE" },
+          "4":  { "description": "Drive, gear 1", "value": "D1" },
+          "5":  { "description": "Drive, gear 2", "value": "D2" },
+          "6":  { "description": "Drive, gear 3", "value": "D3" },
+          "7":  { "description": "Drive, gear 4", "value": "D4" },
+          "8":  { "description": "Drive, gear 5", "value": "D5" },
+          "9":  { "description": "Drive, gear 6", "value": "D6" },
+          "10": { "description": "Drive, gear 7", "value": "D7" },
+          "11": { "description": "Drive, gear 8", "value": "D8" }
         }}
     }
   ]},
@@ -591,11 +598,11 @@
   ]},
 { "hdr": "DA28", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "4C2F"}, "freq": 0.1,
   "signals": [
-    {"id": "GMC_LAT_G", "path": "Orientation", "fmt": { "len": 16, "max": 511, "min": -511, "mul": 156.2, "div": 10000, "sign": true, "unit": "gravity" }, "name": "Lateral acceleration"}
+    {"id": "GMC_LAT_G", "path": "Orientation", "fmt": { "len": 16, "max": 52, "min": -52, "mul": 15.92796725, "div": 10000, "sign": true, "unit": "gravity" }, "name": "Lateral acceleration"}
   ]},
 { "hdr": "DA28", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "4C30"}, "freq": 0.1,
   "signals": [
-    {"id": "GMC_LNG_G", "path": "Orientation", "fmt": { "len": 16, "max": 511, "min": -511, "mul": 156.2, "div": 10000, "sign": true, "unit": "gravity" }, "name": "Longtitudinal acceleration"}
+    {"id": "GMC_LNG_G", "path": "Orientation", "fmt": { "len": 16, "max": 52, "min": -52, "mul": 15.92796725, "div": 10000, "sign": true, "unit": "gravity" }, "name": "Longtitudinal acceleration"}
   ]},
 { "hdr": "DACB", "dbg": true, "cmd": {"22": "27C6"}, "freq": 0.5,
   "signals": [
