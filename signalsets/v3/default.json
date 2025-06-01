@@ -573,7 +573,7 @@
         }}
     }
   ]},
-{ "hdr": "DA1A", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "448F"}, "freq": 1, "filter": { "to": 2025 },
+{ "hdr": "DA1A", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "448F"}, "freq": 1,
   "signals": [
     {"id": "GMC_ODO", "path": "Trips", "fmt": { "len": 32, "max": 1000000, "mul": 156.25, "div": 10000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
