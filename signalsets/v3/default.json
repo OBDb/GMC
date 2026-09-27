@@ -1,8 +1,9 @@
 { "ecu": [
-    { "hdr": "7E0", "type": "engine" },
-    { "hdr": "7E2", "type": "transmission" },
-    { "hdr": "7E4", "type": "hybridControl" },
-    { "hdr": "7E7", "type": "battery" }
+    { "hdr": "7E0",  "type": "engine" },
+    { "hdr": "7E2",  "type": "transmission" },
+    { "hdr": "7E4",  "type": "hybridControl" },
+    { "hdr": "7E7",  "type": "battery" },
+    { "hdr": "DACB", "type": "battery" }
   ],
   "commands": [
 { "hdr": "760", "rax": "768", "dbg": true, "cmd": {"22": "4051"}, "freq": 0.25,
