@@ -32,19 +32,19 @@
   ]},
 { "hdr": "241", "rax": "641", "dbg": true, "cmd": {"22": "5005"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_FL_V2", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+    {"id": "GMC_TP_FL_BCM", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
 { "hdr": "241", "rax": "641", "dbg": true, "cmd": {"22": "5006"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_FR_V2", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+    {"id": "GMC_TP_FR_BCM", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
   ]},
 { "hdr": "241", "rax": "641", "dbg": true, "cmd": {"22": "5007"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_RR_V2", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+    {"id": "GMC_TP_RR_BCM", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
 { "hdr": "241", "rax": "641", "dbg": true, "cmd": {"22": "5008"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_RL_V2", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+    {"id": "GMC_TP_RL_BCM", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
 { "hdr": "257", "rax": "657", "dbg": true, "cmd": {"22": "28CB"}, "freq": 10,
   "signals": [
@@ -128,7 +128,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "115C"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOP_2", "path": "Engine", "fmt": { "len": 8, "max": 131.39, "min": -21.6, "mul": 3, "div": 5, "add": -21.6, "nullmax": 131.39, "unit": "psi" }, "name": "Engine oil pressure 2", "description": "Reads 0 psi at the sensor's zero-pressure floor, raw 36; the 0.6 psi slope is not yet checked against a gauge."}
+    {"id": "GMC_EOP", "path": "Engine", "fmt": { "len": 8, "max": 131.39, "min": -21.6, "mul": 3, "div": 5, "add": -21.6, "nullmax": 131.39, "unit": "psi" }, "name": "Engine oil pressure", "description": "Reads 0 psi at the sensor's zero-pressure floor, raw 36; the 0.6 psi slope is not yet checked against a gauge."}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1161"}, "freq": 5,
   "signals": [
@@ -454,7 +454,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2345"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOP_V2",     "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 400, "div": 100, "unit": "kilopascal" }, "name": "Engine oil pressure"},
+    {"id": "GMC_EOP_V3",     "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 400, "div": 100, "unit": "kilopascal" }, "name": "Engine oil pressure"},
     {"id": "GMC_EOP_ACT_V2", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 4,               "unit": "kilopascal" }, "name": "Engine oil pressure, actual"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2364"}, "freq": 1,
@@ -469,21 +469,21 @@
   "signals": [
     {"id": "GMC_ACTIVE_GRILLE_COLD_T", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Active grille cold temperature mode"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "248E"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "248E"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Left Front Tire Pressure", "suggestedMetric": "frontLeftTirePressure"}
+    {"id": "GMC_TP_FL_7E0", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Left front tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "248F"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "248F"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Right Front Tire Pressure", "suggestedMetric": "frontRightTirePressure"}
+    {"id": "GMC_TP_FR_7E0", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Right front tire pressure", "suggestedMetric": "frontRightTirePressure"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2490"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2490"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Right Rear Tire Pressure", "suggestedMetric": "rearRightTirePressure"}
+    {"id": "GMC_TP_RR_7E0", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Right rear tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2491"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2491"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Left Rear Tire Pressure", "suggestedMetric": "rearLeftTirePressure"}
+    {"id": "GMC_TP_RL_7E0", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Left rear tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "30AD"}, "freq": 5,
   "signals": [
@@ -528,20 +528,6 @@
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "4DC0"}, "freq": 1,
   "signals": [
     {"id": "GMC_EO_LIFE_REMAINING_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Engine oil life remaining"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "C901"}, "freq": 5,
-  "signals": [
-    {"id": "GMC_TP_P1", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Alternative Tire 1 Pressure"},
-    {"id": "GMC_TP_P2", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Alternative Tire 2 Pressure"},
-    {"id": "GMC_TP_P3", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Alternative Tire 3 Pressure"},
-    {"id": "GMC_TP_P4", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Alternative Tire 4 Pressure"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "C902"}, "freq": 5,
-  "signals": [
-    {"id": "GMC_TP_T1", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "fahrenheit" }, "name": "Tire 1 Temp"},
-    {"id": "GMC_TP_T2", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "fahrenheit" }, "name": "Tire 2 Temp"},
-    {"id": "GMC_TP_T3", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "fahrenheit" }, "name": "Tire 3 Temp"},
-    {"id": "GMC_TP_T4", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "fahrenheit" }, "name": "Tire 4 Temp"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F432"}, "freq": 1,
   "signals": [
@@ -855,7 +841,7 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "199A"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_CURRENT_GEAR_VAR_2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Current gear, variant 2"}
+    {"id": "GMC_CURRENT_GEAR_VAR_2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Current gear"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "19D4"}, "freq": 1,
   "signals": [
@@ -1809,8 +1795,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "002F"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FLI_DA11", "path": "Fuel",    "fmt": { "len": 8, "max": 100,  "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel remaining",  "suggestedMetric": "fuelTankLevel"},
-    {"id": "GMC_AUX_V",    "path": "Battery", "fmt": { "len": 8, "max": 25.5, "mul": 10,  "div": 100, "unit": "volts"   }, "name": "Battery voltage"}
+    {"id": "GMC_FLI_DA11", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel remaining", "suggestedMetric": "fuelTankLevel"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "005C"}, "freq": 1,
   "signals": [
@@ -1886,7 +1871,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1470"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOP", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 400, "div": 100, "unit": "kilopascal" }, "name": "Engine oil pressure"}
+    {"id": "GMC_EOP_V2", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 400, "div": 100, "unit": "kilopascal" }, "name": "Engine oil pressure"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "153E"}, "freq": 1,
   "signals": [
