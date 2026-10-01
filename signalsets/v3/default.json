@@ -107,6 +107,10 @@
   "signals": [
     {"id": "GMC_TOTAL_FUEL_CONSUMPTION_RATE", "path": "Fuel", "fmt": { "len": 16, "max": 1310.7, "mul": 200, "div": 10000, "unit": "gramsPerSecond" }, "name": "Total fuel consumption rate"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1124"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_BRAKE_PEDAL_POS", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake pedal position circuit signal"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1141"}, "freq": 1,
   "signals": [
     {"id": "GMC_IGN_1_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Ignition 1 voltage"}
@@ -181,7 +185,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "119D"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAROMETRIC_P_V8_V2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "kilopascal" }, "name": "Barometric pressure, V8"}
+    {"id": "GMC_BAROMETRIC_P_V8", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "kilopascal" }, "name": "Barometric pressure, V8"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "119E"}, "freq": 1,
   "signals": [
@@ -319,27 +323,27 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "162F"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_1_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 1"}
+    {"id": "GMC_BALANCE_RATE_CYL_1", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1630"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_2_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 2"}
+    {"id": "GMC_BALANCE_RATE_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1631"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_3_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 3"}
+    {"id": "GMC_BALANCE_RATE_CYL_3", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1632"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_4_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 4"}
+    {"id": "GMC_BALANCE_RATE_CYL_4", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 4"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1633"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_5_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 5"}
+    {"id": "GMC_BALANCE_RATE_CYL_5", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 5"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1634"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_6_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 6"}
+    {"id": "GMC_BALANCE_RATE_CYL_6", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 6"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1635"}, "freq": 1,
   "signals": [
@@ -433,6 +437,10 @@
   "signals": [
     {"id": "GMC_CRUISE_CTRL_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Cruise control status"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "207E"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_IGN_POWER_MODE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition power mode"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "20AC"}, "freq": 1,
   "signals": [
     {"id": "GMC_FUEL_INJECTION_C1", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "mul": 10, "div": 10000, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 1"}
@@ -440,6 +448,10 @@
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "20B3"}, "freq": 1,
   "signals": [
     {"id": "GMC_FUEL_INJECTION_C8_V2", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "mul": 10, "div": 10000, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 8"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "20D0"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_IGN_INPUT_ON_OFF", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition input on/off/start"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "20E3"}, "freq": 1,
   "signals": [
@@ -470,6 +482,14 @@
   "signals": [
     {"id": "GMC_ACTIVE_GRILLE_COLD_T", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Active grille cold temperature mode"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2434"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_AXLE_TQ_DRIVER_REQ", "path": "Engine", "fmt": { "len": 16, "max": 43001, "min": -22534, "add": -22534, "unit": "newtonMeters" }, "name": "Axle torque driver requested"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "247A"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_HOOD_SWITCH", "path": "Doors", "fmt": { "len": 8, "max": 5, "div": 51, "unit": "volts" }, "name": "Hood switch"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "248E"}, "freq": 15,
   "signals": [
     {"id": "GMC_TP_FL_7E0", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Left front tire pressure", "suggestedMetric": "frontLeftTirePressure"}
@@ -485,6 +505,14 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2491"}, "freq": 15,
   "signals": [
     {"id": "GMC_TP_RL_7E0", "path": "Tires", "fmt": { "len": 8, "max": 255, "unit": "psi" }, "name": "Left rear tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "24AC"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_BAT_THERMAL_V2", "path": "Engine", "fmt": { "len": 16, "max": 131070, "mul": 2, "unit": "seconds" }, "name": "Battery thermal conditioning inactive time"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2810"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_THROTTLE_POS_CALC", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Throttle position calculated"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "30AD"}, "freq": 5,
   "signals": [
@@ -530,13 +558,17 @@
   "signals": [
     {"id": "GMC_EO_LIFE_REMAINING", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Engine oil life remaining"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "905C"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_HOOD_POS", "path": "Doors", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Hood position"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F432"}, "freq": 1,
   "signals": [
     {"id": "GMC_FUEL_TANK_P", "path": "Fuel", "fmt": { "len": 16, "max": 1.96, "div": 33333.3333333333, "unit": "psi" }, "name": "Fuel tank pressure"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1124"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_BRAKE_PEDAL_POS", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake pedal position circuit signal"}
+    {"id": "GMC_BRAKE_PEDAL_POS_V2", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake pedal position circuit signal"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1141"}, "freq": 1,
   "signals": [
@@ -569,11 +601,11 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "207E"}, "freq": 1,
   "signals": [
-    {"id": "GMC_IGN_POWER_MODE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition power mode"}
+    {"id": "GMC_IGN_POWER_MODE_V2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition power mode"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "20D0"}, "freq": 1,
   "signals": [
-    {"id": "GMC_IGN_INPUT_ON_OFF", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition input on/off/start"}
+    {"id": "GMC_IGN_INPUT_ON_OFF_V2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition input on/off/start"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2411"}, "freq": 1,
   "signals": [
@@ -610,7 +642,7 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2434"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_AXLE_TQ_DRIVER_REQ", "path": "Engine", "fmt": { "len": 16, "max": 43001, "min": -22534, "add": -22534, "unit": "newtonMeters" }, "name": "Axle torque driver requested"}
+    {"id": "GMC_AXLE_TQ_DRIVER_REQ_V2", "path": "Engine", "fmt": { "len": 16, "max": 43001, "min": -22534, "add": -22534, "unit": "newtonMeters" }, "name": "Axle torque driver requested"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2487"}, "freq": 1,
   "signals": [
@@ -654,11 +686,11 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2810"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_THROTTLE_POS_CALC", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Throttle position calculated"}
+    {"id": "GMC_THROTTLE_POS_CALC_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Throttle position calculated"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2862"}, "freq": 1,
   "signals": [
-    {"id": "GMC_TRANS_P_V2", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Transmission pressure"}
+    {"id": "GMC_TRANS_P_V3", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Transmission pressure"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2881"}, "freq": 1,
   "signals": [
@@ -828,6 +860,14 @@
   "signals": [
     {"id": "GMC_ONE_PEDAL_DRIVING_8", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "One pedal driving inhibit history 8"}
   ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "1124"}, "freq": 0.25,
+  "signals": [
+    {"id": "GMC_BRAKE_PEDAL_POS_V3", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake pedal position circuit signal"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "1141"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_IGN_V_V2", "path": "Engine", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Ignition voltage"}
+  ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "1940"}, "freq": 5,
   "signals": [
     {"id": "GMC_ATF_T", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
@@ -835,6 +875,10 @@
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "1941"}, "freq": 1,
   "signals": [
     {"id": "GMC_TRANS_ISS", "path": "Transmission", "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "rpm" }, "name": "Transmission input shaft speed, 2"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "1942"}, "freq": 0.25,
+  "signals": [
+    {"id": "GMC_OUTPUT_SHFT_SPD_V3", "path": "Movement", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "rpm" }, "name": "Output shaft speed"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "fcm1": true, "dbg": true, "cmd": {"22": "1991"}, "freq": 0.25,
   "signals": [
@@ -844,6 +888,10 @@
   "signals": [
     {"id": "GMC_CURRENT_GEAR_VAR_2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Current gear, variant 2"}
   ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "19A1"}, "freq": 0.25,
+  "signals": [
+    {"id": "GMC_GEAR_RAT_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear ratio"}
+  ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "19D4"}, "freq": 1,
   "signals": [
     {"id": "GMC_CLU_SLIP_C3_RING", "path": "Transmission", "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "rpm" }, "name": "Clutch slip, AT C3, ring"}
@@ -852,6 +900,14 @@
   "signals": [
     {"id": "GMC_CURRENT_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 252, "min": -3, "add": -3, "unit": "scalar" }, "name": "Current gear"}
   ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "242C"}, "freq": 0.25,
+  "signals": [
+    {"id": "GMC_BRAKE_TQ_V2", "path": "Control", "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "newtonMeters" }, "name": "Brake torque"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "2434"}, "freq": 0.25,
+  "signals": [
+    {"id": "GMC_AXLE_TQ_DRIVER_REQ_V3", "path": "Engine", "fmt": { "len": 16, "max": 43001, "min": -22534, "add": -22534, "unit": "newtonMeters" }, "name": "Axle torque driver requested"}
+  ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "280D"}, "freq": 5,
   "signals": [
     {"id": "GMC_ATF_T_VAR_6", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 6"}
@@ -859,6 +915,10 @@
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "2851"}, "freq": 1,
   "signals": [
     {"id": "GMC_CLU_SLIP_C1_RING", "path": "Transmission", "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "rpm" }, "name": "Clutch slip, AT C1, ring"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "2862"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_TRANS_P_V2", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Transmission pressure"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "fcm1": true, "dbg": true, "cmd": {"22": "295A"}, "freq": 5,
   "signals": [
@@ -950,7 +1010,7 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "247A"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HOOD_SWITCH", "path": "Doors", "fmt": { "len": 8, "max": 5, "div": 51, "unit": "volts" }, "name": "Hood switch"}
+    {"id": "GMC_HOOD_SWITCH_V2", "path": "Doors", "fmt": { "len": 8, "max": 5, "div": 51, "unit": "volts" }, "name": "Hood switch"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "24AB"}, "freq": 1,
   "signals": [
@@ -1058,7 +1118,7 @@
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "432D"}, "freq": 1,
   "signals": [
     {"id": "GMC_BAT_PACK_V_LD", "path": "Engine",  "fmt": { "len": 16, "max": 34078,   "mul": 13,   "div": 25, "unit": "volts" }, "name": "Battery pack voltage LD"},
-    {"id": "GMC_HVBAT_V",       "path": "Battery", "fmt": { "len": 16, "max": 34078.2, "mul": 0.52,            "unit": "volts" }, "name": "HV battery voltage",      "suggestedMetric": "tractionBatteryVoltage"}
+    {"id": "GMC_HVBAT_V_V2",    "path": "Battery", "fmt": { "len": 16, "max": 34078.2, "mul": 0.52,            "unit": "volts" }, "name": "HV battery voltage",      "suggestedMetric": "tractionBatteryVoltage"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "432F"}, "freq": 1,
   "signals": [
@@ -1333,7 +1393,7 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "905C"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HOOD_POS", "path": "Doors", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Hood position"}
+    {"id": "GMC_HOOD_POS_V2", "path": "Doors", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Hood position"}
   ]},
 { "hdr": "7E6", "rax": "7EE", "dbg": true, "cmd": {"22": "4501"}, "freq": 0.25,
   "signals": [
@@ -1796,12 +1856,12 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "0010"}, "freq": 1,
   "signals": [
-    {"id": "GMC_MAF_V2",   "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "gramsPerSecond" }, "name": "Mass airflow sensor", "suggestedMetric": "massAirFlow"},
-    {"id": "GMC_MAF_DA11", "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "gramsPerSecond" }, "name": "Mass airflow sensor"}
+    {"id": "GMC_MAF_DA11", "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "gramsPerSecond" }, "name": "Mass airflow sensor"},
+    {"id": "GMC_MAF_V2",   "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "gramsPerSecond" }, "name": "Mass airflow sensor", "suggestedMetric": "massAirFlow"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "002F"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FLI_V2", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel remaining", "suggestedMetric": "fuelTankLevel"}
+    {"id": "GMC_FLI_DA11", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel remaining", "suggestedMetric": "fuelTankLevel"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "0042"}, "freq": 5,
   "signals": [
@@ -1813,11 +1873,11 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "005C"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOT_V2", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "GMC_EOT_DA11_2_2", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "005E"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_RATE_V2", "path": "Fuel", "fmt": { "len": 16, "max": 3276.75, "mul": 500, "div": 10000, "unit": "liters" }, "name": "Fuel consumption rate"}
+    {"id": "GMC_FUEL_RATE_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 3276.75, "mul": 500, "div": 10000, "unit": "liters" }, "name": "Fuel consumption rate"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "0078"}, "freq": 1,
   "signals": [
@@ -1825,7 +1885,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "009D"}, "freq": 1,
   "signals": [
-    {"id": "GMC_TOTAL_FUEL_CONSUMPTION_RATE_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1310.7, "mul": 200, "div": 10000, "unit": "gramsPerSecond" }, "name": "Total fuel consumption rate"}
+    {"id": "GMC_TOTAL_FUEL_CONSUMPTION_RATE_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 1310.7, "mul": 200, "div": 10000, "unit": "gramsPerSecond" }, "name": "Total fuel consumption rate"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1141"}, "freq": 1,
   "signals": [
@@ -1873,15 +1933,15 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1194"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJECTION_C2_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 2"}
+    {"id": "GMC_FUEL_INJECTION_C2_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 2"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1195"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJECTION_C3_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 3"}
+    {"id": "GMC_FUEL_INJECTION_C3_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 3"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1196"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJECTION_C4_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 4"}
+    {"id": "GMC_FUEL_INJECTION_C4_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 4"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1197"}, "freq": 1,
   "signals": [
@@ -1897,7 +1957,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "119D"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAROMETRIC_P_V8", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "kilopascal" }, "name": "Barometric pressure"}
+    {"id": "GMC_BAROMETRIC_P_V8_V2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "kilopascal" }, "name": "Barometric pressure"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "119E"}, "freq": 1,
   "signals": [
@@ -1969,19 +2029,19 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1205"}, "freq": 1,
   "signals": [
-    {"id": "GMC_MISFIRES_C2_CUR_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 2"}
+    {"id": "GMC_MISFIRES_C2_CUR_DA11", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 2"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1206"}, "freq": 1,
   "signals": [
-    {"id": "GMC_MISFIRES_C1_CUR_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 1"}
+    {"id": "GMC_MISFIRES_C1_CUR_DA11", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 1"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1207"}, "freq": 1,
   "signals": [
-    {"id": "GMC_MISFIRES_C3_CUR_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 3"}
+    {"id": "GMC_MISFIRES_C3_CUR_DA11", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 3"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1208"}, "freq": 1,
   "signals": [
-    {"id": "GMC_MISFIRES_C4_CUR_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 4"}
+    {"id": "GMC_MISFIRES_C4_CUR_DA11", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Misfires, current, cylinder 4"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1251"}, "freq": 1,
   "signals": [
@@ -2017,7 +2077,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1470"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOP_V2", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 400, "div": 100, "unit": "kilopascal" }, "name": "Engine oil pressure"}
+    {"id": "GMC_EOP_DA11_2", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 400, "div": 100, "unit": "kilopascal" }, "name": "Engine oil pressure"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1538"}, "freq": 5,
   "signals": [
@@ -2026,7 +2086,7 @@
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "153E"}, "freq": 1,
   "signals": [
     {"id": "GMC_EOT_2",  "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
-    {"id": "GMC_EOT_V3", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "GMC_EOT_V2", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1564"}, "freq": 1,
   "signals": [
@@ -2034,27 +2094,27 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "162F"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_1", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 1"}
+    {"id": "GMC_BALANCE_RATE_CYL_1_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 1"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1630"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 2"}
+    {"id": "GMC_BALANCE_RATE_CYL_2_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 2"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1631"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_3", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 3"}
+    {"id": "GMC_BALANCE_RATE_CYL_3_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 3"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1632"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_4", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 4"}
+    {"id": "GMC_BALANCE_RATE_CYL_4_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 4"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1633"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_5", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 5"}
+    {"id": "GMC_BALANCE_RATE_CYL_5_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 5"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1634"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BALANCE_RATE_CYL_6", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 6"}
+    {"id": "GMC_BALANCE_RATE_CYL_6_V2", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "add": -512, "unit": "scalar" }, "name": "Balance rate, cylinder 6"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1635"}, "freq": 1,
   "signals": [
@@ -2126,7 +2186,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20AC"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJECTION_C1_V2", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "mul": 10, "div": 10000, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 1"}
+    {"id": "GMC_FUEL_INJECTION_C1_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "mul": 10, "div": 10000, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 1"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20AD"}, "freq": 1,
   "signals": [
@@ -2154,7 +2214,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20E3"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BP_ACT_V2", "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilopascal" }, "name": "Boost pressure, actual"}
+    {"id": "GMC_BP_ACT_DA11", "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilopascal" }, "name": "Boost pressure: actual"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20F3"}, "freq": 1,
   "signals": [
@@ -2178,7 +2238,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "2344"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOP_ABS_2", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 4, "unit": "kilopascal" }, "name": "Engine oil absolute pressure"}
+    {"id": "GMC_EOP_ABS_2", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 4, "unit": "kilopascal" }, "name": "Engine oil absolute pressure sensor"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "2345"}, "freq": 1,
   "signals": [
@@ -2234,11 +2294,11 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "30AD"}, "freq": 1,
   "signals": [
-    {"id": "GMC_CHARGE_AIR_COOLER_T_SNS_1_V2", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Charge air cooler temperature sensor 1"}
+    {"id": "GMC_CHARGE_AIR_COOLER_T_SNS_1_DA11", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Charge air cooler temperature sensor 1"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "30AE"}, "freq": 1,
   "signals": [
-    {"id": "GMC_CHARGE_AIR_COOLER_T_SNS_2_V2", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Charge air cooler temperature sensor 2"}
+    {"id": "GMC_CHARGE_AIR_COOLER_T_SNS_2_DA11", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Charge air cooler temperature sensor 2"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "3201"}, "freq": 0.25,
   "signals": [
@@ -2246,11 +2306,11 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "3218"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_T_V2", "path": "Fuel", "fmt": { "len": 8, "max": 127.5, "mul": 50, "div": 100, "unit": "celsius" }, "name": "Fuel temperature"}
+    {"id": "GMC_FUEL_T_DA11", "path": "Fuel", "fmt": { "len": 8, "max": 127.5, "mul": 50, "div": 100, "unit": "celsius" }, "name": "Fuel temperature"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "328A"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BP_DES_V2", "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilopascal" }, "name": "Boost pressure: desired"}
+    {"id": "GMC_BP_DES_DA11", "path": "Engine", "fmt": { "len": 16, "max": 655.35, "mul": 100, "div": 10000, "unit": "kilopascal" }, "name": "Boost pressure: desired"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "3318"}, "freq": 1,
   "signals": [
@@ -2279,7 +2339,7 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "36A7"}, "freq": 30,
   "signals": [
-    {"id": "GMC_AIRFILT_LIFE_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Air filter life remaining"}
+    {"id": "GMC_AIRFILT_LIFE_DA11", "path": "Engine", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Air filter life remaining"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "37A7"}, "freq": 1,
   "signals": [
@@ -2291,11 +2351,19 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "4DC0"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EO_LIFE_REMAINING_V2", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Engine oil life remaining"}
+    {"id": "GMC_EO_LIFE_REMAINING_DA11", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Engine oil life remaining"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "F432"}, "freq": 1,
   "signals": [
     {"id": "GMC_FUEL_TANK_P_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1.96, "div": 33333.3333333333, "unit": "psi" }, "name": "Fuel tank pressure"}
+  ]},
+{ "hdr": "DA17", "rax": "17", "dbg": true, "cmd": {"22": "2414"}, "freq": 1,
+  "signals": [
+    {"id": "GMC_HVBAT_C", "path": "Battery", "fmt": { "len": 16, "max": 1000, "min": -1000, "div": 20, "sign": true, "unit": "amps" }, "name": "Traction battery current", "suggestedMetric": "tractionBatteryCurrent", "description": "Signed pack current from the drive-motor/power-electronics controller (negative = charging). Confirmed -22.75 A at a steady 9.22 kW AC charge and +0.9 A accessory draw in Ready. Same register family as Chevy Bolt 7E1 222414."}
+  ]},
+{ "hdr": "DA17", "rax": "17", "dbg": true, "cmd": {"22": "2429"}, "freq": 3600,
+  "signals": [
+    {"id": "GMC_HVBAT_NOM_V", "path": "Battery", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "volts" }, "name": "Traction battery nominal voltage", "description": "Constant rated (nominal) pack voltage, 352.1 V on a 2025 LYRIQ - identical while charging at 70% SOC and at rest at 80% SOC, so it is not a live measurement. Duplicates at 2428/242D/2434/2489."}
   ]},
 { "hdr": "DA18", "rax": "2AF118", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1940"}, "freq": 1,
   "signals": [
@@ -2307,11 +2375,25 @@
   ]},
 { "hdr": "DA18", "rax": "2AF118", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1991"}, "freq": 1,
   "signals": [
-    {"id": "GMC_TC_SLIP_VSS_V2", "path": "Movement", "fmt": { "len": 16, "max": 4095.875, "min": -4096, "mul": 1250, "div": 10000, "sign": true, "unit": "rpm" }, "name": "Torque converter clutch slip speed"}
+    {"id": "GMC_TC_SLIP_VSS_DA18", "path": "Movement", "fmt": { "len": 16, "max": 4095.875, "min": -4096, "mul": 1250, "div": 10000, "sign": true, "unit": "rpm" }, "name": "Torque converter clutch slip speed"}
   ]},
-{ "hdr": "DA18", "rax": "2AF118", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1B30"}, "freq": 1,
+{ "hdr": "DA18", "rax": "2AF118", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1B30"}, "freq": 0.25,
   "signals": [
     {"id": "GMC_CURRENT_GEAR_V2", "path": "Transmission", "fmt": { "len": 8, "max": 252, "min": -3, "add": -3, "unit": "scalar" }, "name": "Current gear"},
+    {"id": "GMC_GEAR", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
+          "1":  { "description": "Neutral",       "value": "NEUTRAL" },
+          "2":  { "description": "Park",          "value": "PARK" },
+          "3":  { "description": "Reverse",       "value": "REVERSE" },
+          "4":  { "description": "Drive, gear 1", "value": "D1" },
+          "5":  { "description": "Drive, gear 2", "value": "D2" },
+          "6":  { "description": "Drive, gear 3", "value": "D3" },
+          "7":  { "description": "Drive, gear 4", "value": "D4" },
+          "8":  { "description": "Drive, gear 5", "value": "D5" },
+          "9":  { "description": "Drive, gear 6", "value": "D6" },
+          "10": { "description": "Drive, gear 7", "value": "D7" },
+          "11": { "description": "Drive, gear 8", "value": "D8" }
+        }}
+    },
     {"id": "GMC_CURRENT_GEAR_2", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
           "1":  { "description": "Neutral",        "value": "NEUTRAL" },
           "2":  { "description": "Park",           "value": "PARK" },
@@ -2326,20 +2408,6 @@
           "11": { "description": "Drive, gear 8",  "value": "D8" },
           "12": { "description": "Drive, gear 9",  "value": "D9" },
           "13": { "description": "Drive, gear 10", "value": "D10" }
-        }}
-    },
-    {"id": "GMC_GEAR", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
-          "1":  { "description": "Neutral",       "value": "NEUTRAL" },
-          "2":  { "description": "Park",          "value": "PARK" },
-          "3":  { "description": "Reverse",       "value": "REVERSE" },
-          "4":  { "description": "Drive, gear 1", "value": "D1" },
-          "5":  { "description": "Drive, gear 2", "value": "D2" },
-          "6":  { "description": "Drive, gear 3", "value": "D3" },
-          "7":  { "description": "Drive, gear 4", "value": "D4" },
-          "8":  { "description": "Drive, gear 5", "value": "D5" },
-          "9":  { "description": "Drive, gear 6", "value": "D6" },
-          "10": { "description": "Drive, gear 7", "value": "D7" },
-          "11": { "description": "Drive, gear 8", "value": "D8" }
         }}
     }
   ]},
@@ -2357,16 +2425,17 @@
   ]},
 { "hdr": "DA18", "rax": "2AF118", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "295A"}, "freq": 1,
   "signals": [
-    {"id": "GMC_TF_T_FLTED_V2",   "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, filtered"},
-    {"id": "GMC_TF_T_FLTED_DA18", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, filtered", "suggestedMetric": "transmissionFluidTemperature"}
+    {"id": "GMC_TF_T_FLTED_DA18", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, filtered", "suggestedMetric": "transmissionFluidTemperature"},
+    {"id": "GMC_TF_T_FLTED_V2",   "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, filtered"}
   ]},
 { "hdr": "DA1A", "rax": "2AF11A", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "448F"}, "freq": 30,
   "signals": [
     {"id": "GMC_ODO", "path": "Trips", "fmt": { "len": 32, "max": 1000000, "mul": 156.25, "div": 10000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
-{ "hdr": "DA1D", "dbg": true, "cmd": {"22": "33E5"}, "freq": 1,
+{ "hdr": "DA1D", "dbg": true, "cmd": {"22": "33E5"}, "freq": 10,
   "signals": [
-    {"id": "GMC_HVBAT_V_V2", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "DMCM battery voltage", "description": "From the Drive Motor Control Module."}
+    {"id": "GMC_12V_V",   "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "12V battery voltage",  "suggestedMetric": "starterBatteryVoltage",            "description": "12 V system voltage from the Drive Motor Control Module (matches Chevrolet-Equinox-EV DA1D 2233E5). Note: LYRIQ command_support docs list this DID as HV pack voltage - on-vehicle it reads 13.1-13.9 V under DC-DC float and does not track pack voltage."},
+    {"id": "GMC_HVBAT_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "DMCM battery voltage", "description": "From the Drive Motor Control Module."}
   ]},
 { "hdr": "DA28", "rax": "2AF128", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "4A7A"}, "freq": 0.25,
   "signals": [
@@ -2407,6 +2476,46 @@
   "signals": [
     {"id": "GMC_TID_RL_DA40", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Rear left tire sensor ID"}
   ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "40E5"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_COOL_T1", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery coolant temperature 1"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "40E6"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_COOL_T2", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery coolant temperature 2"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "4124"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_T_B", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery temperature sensor B"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "4127"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_T_A", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery temperature sensor A"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "4149"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_EVSE_PILOT_C", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 10, "unit": "amps" }, "name": "Charge station pilot current", "description": "J1772 pilot-advertised AC current limit. Read 38.8 A on a 9.2 kW EVSE while plugged; snaps to a 10.0 A default when unplugged."}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "416C"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_GRP1_V", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 100, "unit": "volts" }, "name": "Traction battery group 1 voltage"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "416D"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_GRP2_V", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 100, "unit": "volts" }, "name": "Traction battery group 2 voltage"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "416E"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_GRP3_V", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 100, "unit": "volts" }, "name": "Traction battery group 3 voltage", "description": "~51 V battery groups; rise under charge, fall under load, and read 0 with the vehicle off (live measurements behind the contactors)."}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "434F"}, "freq": 5,
+  "signals": [
+    {"id": "GMC_HVBAT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Traction battery temperature", "description": "Same encoding as Chevy Bolt 7E4 22434F."}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "448F"}, "freq": 30,
+  "signals": [
+    {"id": "GMC_ODO_V2", "path": "Trips", "fmt": { "len": 32, "max": 671088, "div": 64, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer", "description": "u32/64 km. Verified against the dash to the mile (2,031,186/64 = 31,737 km = 19,720 mi). 22415B returns the same register."}
+  ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "5005"}, "freq": 15,
   "signals": [
     {"id": "GMC_TP_FL_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
@@ -2425,17 +2534,17 @@
   ]},
 { "hdr": "DACB", "dbg": true, "cmd": {"22": "27C6"}, "freq": 0.5,
   "signals": [
-    {"id": "GMC_SOC_HD", "path": "Battery", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "SoC (high res)", "suggestedMetric": "stateOfCharge", "description": "A high resolution measure of the battery pack's remaining state of charge."}
+    {"id": "GMC_SOC_HD", "path": "Battery", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "State of charge, high resolution", "suggestedMetric": "stateOfCharge", "description": "A high resolution measure of the battery pack's remaining state of charge."}
   ]},
 { "hdr": "DACB", "dbg": true, "cmd": {"22": "2AF5"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HVBAT_C_V_AVG", "path": "Battery", "fmt": {           "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage (avg)"},
-    {"id": "GMC_HVBAT_C_V_MIN", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage (min)"},
-    {"id": "GMC_HVBAT_C_V_MAX", "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage (max)"}
+    {"id": "GMC_HVBAT_C_V_AVG", "path": "Battery", "fmt": {           "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage, average"},
+    {"id": "GMC_HVBAT_C_V_MIN", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage, minimum"},
+    {"id": "GMC_HVBAT_C_V_MAX", "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 6.55, "div": 10000, "unit": "volts" }, "name": "Cell voltage, maximum"}
   ]},
 { "hdr": "DACB", "dbg": true, "cmd": {"22": "2B43"}, "freq": 1,
   "signals": [
-    {"id": "GMC_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "SoC", "suggestedMetric": "stateOfCharge"}
+    {"id": "GMC_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "State of charge", "suggestedMetric": "stateOfCharge"}
   ]}
 ]
 }
