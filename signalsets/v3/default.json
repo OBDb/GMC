@@ -313,8 +313,9 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "153E"}, "freq": 5,
   "signals": [
-    {"id": "GMC_EOT_DA11", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
-    {"id": "GMC_EOT_ALT",  "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "GMC_EOT_DA11", "path": "Engine", "fmt": { "len": 8, "max": 215,             "add": -40,                 "unit": "celsius" }, "name": "Engine oil temperature"},
+    {"id": "GMC_EOT_ALT",  "path": "Engine", "fmt": { "len": 8, "max": 215,             "add": -40,                 "unit": "celsius" }, "name": "Engine oil temperature",   "suggestedMetric": "engineOilTemperature"},
+    {"id": "GMC_EOT_2",    "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "unit": "celsius" }, "name": "Engine oil temperature 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1564"}, "freq": 1,
   "signals": [
@@ -2085,8 +2086,8 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "153E"}, "freq": 1,
   "signals": [
-    {"id": "GMC_EOT_2",  "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
-    {"id": "GMC_EOT_V2", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "GMC_EOT_2_V2", "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
+    {"id": "GMC_EOT_V2",   "path": "Engine", "fmt": { "len": 8, "max": 215, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1564"}, "freq": 1,
   "signals": [
