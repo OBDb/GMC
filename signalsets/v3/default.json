@@ -7,8 +7,10 @@
     { "hdr": "7E6",                   "type": "abs" },
     { "hdr": "7E7",                   "type": "battery" },
     { "hdr": "DA11", "rax": "2AF111", "type": "engine" },
+    { "hdr": "DA18",                  "type": "transmission" },
     { "hdr": "DA18", "rax": "2AF118", "type": "transmission" },
     { "hdr": "DA1A", "rax": "2AF11A", "type": "cluster" },
+    { "hdr": "DA28",                  "type": "abs" },
     { "hdr": "DA28", "rax": "2AF128", "type": "abs" },
     { "hdr": "DA40", "rax": "40",     "type": "bodyControl" },
     { "hdr": "DACB",                  "type": "battery" }
