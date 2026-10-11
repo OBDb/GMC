@@ -585,12 +585,12 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1942"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_TRANS_RPM",           "path": "Transmission", "fmt": { "len": 16, "max": 8191,               "div": 8,               "unit": "rpm" }, "name": "Transmission RPM"},
-    {"id": "GMC_OUTPUT_SHFT_SPD_7E1", "path": "Movement",     "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "rpm" }, "name": "AT output shaft speed"}
+    {"id": "GMC_OUTPUT_SHFT_SPD_7E1", "path": "Movement",     "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "rpm" }, "name": "AT output shaft speed"},
+    {"id": "GMC_TRANS_RPM",           "path": "Transmission", "fmt": { "len": 16, "max": 8191,               "div": 8,               "unit": "rpm" }, "name": "Transmission RPM"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1C24"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HIGH_V_CIRCUIT_HPCM", "path": "Engine", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "volts" }, "name": "High voltage circuit, hybrid powertrain control module"}
+    {"id": "GMC_MG_V_2", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "volts" }, "name": "MG voltage 2"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1C26"}, "freq": 5,
   "signals": [
@@ -614,20 +614,20 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2411"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_PACK_ST_CHG_RAW_2", "path": "Engine",  "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery pack state of charge raw LD 2"},
-    {"id": "GMC_ST_CHG_RAW_2",          "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "scalar"  }, "name": "State of charge raw 2"}
+    {"id": "GMC_ST_CHG_RAW_2",          "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "scalar"  }, "name": "State of charge raw 2"},
+    {"id": "GMC_BAT_PACK_ST_CHG_RAW_2", "path": "Engine",  "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery pack state of charge raw LD 2"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2414"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HIGH_V_CURRENT_HD", "path": "Engine", "fmt": { "len": 16, "max": 1638, "min": -1638, "div": 20, "sign": true, "unit": "amps" }, "name": "High voltage current HD"}
+    {"id": "GMC_HIGH_V_CURRENT", "path": "Engine", "fmt": { "len": 16, "max": 1638, "min": -1638, "div": 20, "sign": true, "unit": "amps" }, "name": "High voltage current"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2416"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_MAX_ALT", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack maximum temperature, alternate"}
+    {"id": "GMC_BATT_T_2416", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery temperature 2416"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2417"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_MIN_ALT", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack minimum temperature, alternate"}
+    {"id": "GMC_BATT_T_2417", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery temperature 2417"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2426"}, "freq": 0.25,
   "signals": [
@@ -643,7 +643,7 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "242C"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_BRAKE_TQ_V2", "path": "Control", "fmt": { "len": 16, "max": 32767, "div": 2, "unit": "newtonMeters" }, "name": "Brake torque"}
+    {"id": "GMC_BRAKE_TQ_V2", "path": "Control", "fmt": { "len": 16, "max": 8191, "min": -8192, "div": 4, "sign": true, "unit": "newtonMeters" }, "name": "Brake torque"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2434"}, "freq": 0.25,
   "signals": [
@@ -711,7 +711,7 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2885"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HIGH_V_MG_V", "path": "Engine", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "volts" }, "name": "High voltage MG voltage"}
+    {"id": "GMC_MGA_V", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "volts" }, "name": "Motor-generator A voltage"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2886"}, "freq": 1,
   "signals": [
@@ -719,7 +719,7 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2889"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_TRANS_GEAR_POS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission gear position"}
+    {"id": "GMC_GEAR_POS_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear, AT position"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "288A"}, "freq": 0.25,
   "signals": [
@@ -1009,9 +1009,9 @@
   "signals": [
     {"id": "GMC_GEAR_RAT_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear ratio"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "1C43"}, "freq": 5,
+{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "1C43"}, "freq": 10,
   "signals": [
-    {"id": "GMC_ELECTRONICS_CLT_TEMP", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Electronics coolant temperature"}
+    {"id": "GMC_PEM_T", "path": "Electrical", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Power electronics coolant temperature"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "247A"}, "freq": 1,
   "signals": [
@@ -1031,8 +1031,8 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41A3"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_PACK_CAP_AH_RAW_2017_2018", "path": "Engine",  "fmt": { "len": 16, "max": 6553,   "div": 10, "unit": "ampereHours" }, "name": "Battery pack capacity, raw"},
-    {"id": "GMC_HVBAT_CAP_AH",                  "path": "Battery", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "ampereHours" }, "name": "HV battery capacity"}
+    {"id": "GMC_HVBAT_CAP_AH",                  "path": "Battery", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "ampereHours" }, "name": "HV battery capacity"},
+    {"id": "GMC_BAT_PACK_CAP_AH_RAW_2017_2018", "path": "Engine",  "fmt": { "len": 16, "max": 6553,   "div": 10, "unit": "ampereHours" }, "name": "Battery pack capacity, raw"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41A4"}, "freq": 5,
   "signals": [
@@ -1054,10 +1054,10 @@
   "signals": [
     {"id": "GMC_CABIN_AC_COMMAND_W", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "watts" }, "name": "Cabin A/C power, commanded"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B2"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B2"}, "freq": 0.25,
   "signals": [
-    {"id": "GMC_CABIN_AC_MEAS_W",  "path": "Engine",   "fmt": { "len": 16, "max": 65535,                              "unit": "watts" }, "name": "Cabin A/C power, measured"},
-    {"id": "GMC_BATT_CLT_PMP_RPM", "path": "Movement", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm"   }, "name": "Battery coolant pump speed"}
+    {"id": "GMC_BATT_CLT_PMP_RPM", "path": "Movement", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm"   }, "name": "Battery coolant pump speed"},
+    {"id": "GMC_CABIN_AC_MEAS_W",  "path": "Engine",   "fmt": { "len": 16, "max": 65535,                              "unit": "watts" }, "name": "Cabin A/C power, measured"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B3"}, "freq": 1,
   "signals": [
@@ -1065,7 +1065,7 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B4"}, "freq": 1,
   "signals": [
-    {"id": "GMC_CABIN_HEATER_MEAS_W", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "watts" }, "name": "Cabin heater power, measured"}
+    {"id": "GMC_HEATER_CABIN", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "watts" }, "name": "Heater - cabin"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B5"}, "freq": 1,
   "signals": [
@@ -1073,7 +1073,7 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B6"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_HEATER_MEAS_W", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "watts" }, "name": "Battery heater power, measured"}
+    {"id": "GMC_HEATER_BAT", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "watts" }, "name": "Battery heater power"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "41B7"}, "freq": 1,
   "signals": [
@@ -1105,8 +1105,8 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "4329"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_CELL_MIN_V", "path": "Engine",  "fmt": { "len": 16, "max": 39.32, "mul": 3,            "div": 5000, "unit": "volts" }, "name": "Battery cell minimum voltage"},
-    {"id": "GMC_MG_V_6",         "path": "Battery", "fmt": { "len": 16, "max": 3880,  "mul": 0.0592111886,              "unit": "volts" }, "name": "MG voltage 6"}
+    {"id": "GMC_MG_V_6",         "path": "Battery", "fmt": { "len": 16, "max": 3880,  "mul": 0.0592111886,              "unit": "volts" }, "name": "MG voltage 6"},
+    {"id": "GMC_BAT_CELL_MIN_V", "path": "Engine",  "fmt": { "len": 16, "max": 39.32, "mul": 3,            "div": 5000, "unit": "volts" }, "name": "Battery cell minimum voltage"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "432A"}, "freq": 1,
   "signals": [
@@ -1122,8 +1122,8 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "432D"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_PACK_V_LD", "path": "Engine",  "fmt": { "len": 16, "max": 34078,   "mul": 13,   "div": 25, "unit": "volts" }, "name": "Battery pack voltage LD"},
-    {"id": "GMC_HVBAT_V_V2",    "path": "Battery", "fmt": { "len": 16, "max": 34078.2, "mul": 0.52,            "unit": "volts" }, "name": "HV battery voltage",      "suggestedMetric": "tractionBatteryVoltage"}
+    {"id": "GMC_HVBAT_V",       "path": "Battery", "fmt": { "len": 16, "max": 34078.2, "mul": 0.52,            "unit": "volts" }, "name": "HV battery voltage",      "suggestedMetric": "tractionBatteryVoltage"},
+    {"id": "GMC_BAT_PACK_V_LD", "path": "Engine",  "fmt": { "len": 16, "max": 34078,   "mul": 13,   "div": 25, "unit": "volts" }, "name": "Battery pack voltage LD"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "432F"}, "freq": 1,
   "signals": [
@@ -1163,8 +1163,8 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "4356"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HIGH_V_CURRENT",       "path": "Engine", "fmt": { "len": 16, "max": 4909, "min": -4908, "mul": -40,  "div": 267,  "sign": true, "unit": "amps" }, "name": "High voltage current"},
-    {"id": "GMC_HIGH_V_CURRENT_HD_V2", "path": "Engine", "fmt": { "len": 16, "max": 4915, "min": -4915, "mul": -500, "div": 3333, "sign": true, "unit": "amps" }, "name": "High voltage current HD"}
+    {"id": "GMC_HIGH_V_CURRENT_HD", "path": "Engine", "fmt": { "len": 16, "max": 4915, "min": -4915, "mul": -500, "div": 3333, "sign": true, "unit": "amps" }, "name": "High voltage current HD"},
+    {"id": "GMC_HIGH_V_CURRENT_V2", "path": "Engine", "fmt": { "len": 16, "max": 4909, "min": -4908, "mul": -40,  "div": 267,  "sign": true, "unit": "amps" }, "name": "High voltage current"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "4357"}, "freq": 1,
   "signals": [
@@ -1224,8 +1224,8 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "437D"}, "freq": 1,
   "signals": [
-    {"id": "GMC_CHARGER_LAST_CHG_AC_2017_2018", "path": "Engine",  "fmt": { "len": 16, "max": 655,    "div": 100,                    "unit": "kilowattHours" }, "name": "Charger last charge AC energy"},
-    {"id": "GMC_LAST_CHG_AC_KWH",               "path": "Battery", "fmt": { "len": 16, "max": 655.34, "div": 100, "nullmin": 655.35, "unit": "kilowattHours" }, "name": "AC energy from the wall, last or current charge"}
+    {"id": "GMC_LAST_CHG_AC_KWH",               "path": "Battery", "fmt": { "len": 16, "max": 655.34, "div": 100, "nullmin": 655.35, "unit": "kilowattHours" }, "name": "AC energy from the wall, last or current charge"},
+    {"id": "GMC_CHARGER_LAST_CHG_AC_2017_2018", "path": "Engine",  "fmt": { "len": 16, "max": 655,    "div": 100,                    "unit": "kilowattHours" }, "name": "Charger last charge AC energy"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "437F"}, "freq": 1,
   "signals": [
@@ -1235,10 +1235,10 @@
   "signals": [
     {"id": "GMC_CHG_LIFETIME", "path": "Battery", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Lifetime charge energy"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "439E"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "439E"}, "freq": 30,
   "signals": [
-    {"id": "GMC_BAT_HEATER_COMMAND", "path": "Engine",  "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51,   "unit": "percent" }, "name": "Battery heater, commanded"},
-    {"id": "GMC_HEATER_BAT_PCT",     "path": "Battery", "fmt": { "len": 8, "max": 100,            "div": 2.55, "unit": "percent" }, "name": "Battery heater duty"}
+    {"id": "GMC_HEATER_BAT_PCT",     "path": "Battery", "fmt": { "len": 8, "max": 100,            "div": 2.55, "unit": "percent" }, "name": "Battery heater duty"},
+    {"id": "GMC_BAT_HEATER_COMMAND", "path": "Engine",  "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51,   "unit": "percent" }, "name": "Battery heater, commanded"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "43A5"}, "freq": 3600,
   "signals": [
@@ -1250,7 +1250,7 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "43AF"}, "freq": 1,
   "signals": [
-    {"id": "GMC_HVBAT_SOC_RAW", "path": "Battery", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "HV battery charge (raw)", "suggestedMetric": "stateOfCharge"}
+    {"id": "GMC_HVBAT_SOC_RAW", "path": "Battery", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "HV battery charge, raw", "suggestedMetric": "stateOfCharge"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "43B0"}, "freq": 1,
   "signals": [
@@ -1365,16 +1365,16 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "801E"}, "freq": 5,
   "signals": [
-    {"id": "GMC_AIR_TEMP_UNFILTERED", "path": "Engine", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Air temperature unfiltered"}
+    {"id": "GMC_AIR_T_1", "path": "Engine", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Air temperature 1"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "801F"}, "freq": 5,
   "signals": [
-    {"id": "GMC_AIR_TEMP_FILTERED", "path": "Engine", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Air temperature filtered"}
+    {"id": "GMC_AIR_T_2", "path": "Engine", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Air temperature 2"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "82B2"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "82B2"}, "freq": 5,
   "signals": [
-    {"id": "GMC_CABIN_AC_LOW_SIDE_P", "path": "Engine", "fmt": { "len": 8, "max": 695,               "mul": 13647, "div": 5000,             "unit": "kilopascal" }, "name": "Cabin A/C low side sensor pressure"},
-    {"id": "GMC_VENT_T",              "path": "Engine", "fmt": { "len": 8, "max": 21.87, "min": -10,               "div": 8,    "add": -10, "unit": "celsius"    }, "name": "Vent temperature"}
+    {"id": "GMC_VENT_T",              "path": "Engine", "fmt": { "len": 8, "max": 21.87, "min": -10,               "div": 8,    "add": -10, "unit": "celsius"    }, "name": "Vent temperature"},
+    {"id": "GMC_CABIN_AC_LOW_SIDE_P", "path": "Engine", "fmt": { "len": 8, "max": 695,               "mul": 13647, "div": 5000,             "unit": "kilopascal" }, "name": "Cabin A/C low side sensor pressure"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "82B3"}, "freq": 1,
   "signals": [
@@ -1418,37 +1418,37 @@
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40D3"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_5V_REFERENCE_V_1",  "path": "Engine",  "fmt": { "len": 16, "max": 7.49,           "div": 13107, "add": 5, "sign": true, "unit": "volts" }, "name": "Battery 5V reference voltage"},
-    {"id": "GMC_BECM_5V_REFERENCE_V_1", "path": "Battery", "fmt": { "len": 16, "max": 7.49, "mul": 5, "div": 65536, "add": 5, "sign": true, "unit": "volts" }, "name": "Battery controller 5V reference voltage"}
+    {"id": "GMC_BECM_5V_REFERENCE_V_1", "path": "Battery", "fmt": { "len": 16, "max": 7.49, "mul": 5, "div": 65536, "add": 5, "sign": true, "unit": "volts" }, "name": "Battery controller 5V reference voltage"},
+    {"id": "GMC_BAT_5V_REFERENCE_V_1",  "path": "Engine",  "fmt": { "len": 16, "max": 7.49,           "div": 13107, "add": 5, "sign": true, "unit": "volts" }, "name": "Battery 5V reference voltage"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40D4"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_PACK_CURRENT_HD", "path": "Engine",  "fmt": { "len": 16, "max": 1638,   "min": -1638,               "div": 20, "sign": true, "unit": "amps" }, "name": "Battery pack current HD"},
-    {"id": "GMC_HVBAT_A",             "path": "Battery", "fmt": { "len": 16, "max": 1638.4, "min": -1638.35, "mul": -1, "div": 20, "sign": true, "unit": "amps" }, "name": "HV battery current",      "suggestedMetric": "tractionBatteryCurrent"}
+    {"id": "GMC_HVBAT_A",             "path": "Battery", "fmt": { "len": 16, "max": 1638.4, "min": -1638.35, "mul": -1, "div": 20, "sign": true, "unit": "amps" }, "name": "HV battery current",      "suggestedMetric": "tractionBatteryCurrent"},
+    {"id": "GMC_BAT_PACK_CURRENT_HD", "path": "Engine",  "fmt": { "len": 16, "max": 1638,   "min": -1638,               "div": 20, "sign": true, "unit": "amps" }, "name": "Battery pack current HD"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40D7"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_1", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack temperature 1"}
+    {"id": "GMC_BECM_BAT_SECTION_1_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery section 1 temperature"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40D9"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_2", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack temperature 2"}
+    {"id": "GMC_BECM_BAT_SECTION_2_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery section 2 temperature"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40DB"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_3", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack temperature 3"}
+    {"id": "GMC_BECM_BAT_SECTION_3_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery section 3 temperature"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40DD"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_4", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack temperature 4"}
+    {"id": "GMC_BECM_BAT_SECTION_4_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery section 4 temperature"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40DF"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_5", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack temperature 5"}
+    {"id": "GMC_BECM_BAT_SECTION_5_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery section 5 temperature"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "40E1"}, "freq": 5,
   "signals": [
-    {"id": "GMC_BAT_PACK_TEMP_6", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery pack temperature 6"}
+    {"id": "GMC_BECM_BAT_SECTION_6_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery section 6 temperature"}
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "4181"}, "freq": 10,
   "signals": [
@@ -1852,8 +1852,8 @@
   ]},
 { "hdr": "7E7", "rax": "7EF", "dbg": true, "cmd": {"22": "C218"}, "freq": 1,
   "signals": [
-    {"id": "GMC_BAT_CELL_AVG_V",  "path": "Engine",  "fmt": { "len": 16, "max": 5,              "div": 13107, "unit": "volts" }, "name": "Battery cell average voltage"},
-    {"id": "GMC_BECM_AVG_CELL_V", "path": "Battery", "fmt": { "len": 16, "max": 4.99, "mul": 5, "div": 65536, "unit": "volts" }, "name": "Battery average cell voltage"}
+    {"id": "GMC_BECM_AVG_CELL_V", "path": "Battery", "fmt": { "len": 16, "max": 4.99, "mul": 5, "div": 65536, "unit": "volts" }, "name": "Battery average cell voltage"},
+    {"id": "GMC_BAT_CELL_AVG_V",  "path": "Engine",  "fmt": { "len": 16, "max": 5,              "div": 13107, "unit": "volts" }, "name": "Battery cell average voltage"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "000D"}, "freq": 0.25,
   "signals": [
@@ -1955,11 +1955,11 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1197"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJECTION_C5_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 5"}
+    {"id": "GMC_FUEL_INJECTION_C5_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 5"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1198"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJECTION_C6_V2", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 6"}
+    {"id": "GMC_FUEL_INJECTION_C6_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 1000, "mul": 1000, "div": 65535, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 6"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1199"}, "freq": 1,
   "signals": [
@@ -2230,8 +2230,8 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20B3"}, "freq": 1,
   "signals": [
-    {"id": "GMC_FUEL_INJ_CYL_8",       "path": "Fuel", "fmt": { "len": 16, "max": 65.53,             "div": 1000,  "unit": "milliseconds" }, "name": "Fuel injection, cylinder 8"},
-    {"id": "GMC_FUEL_INJECTION_C8_V2", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "mul": 10, "div": 10000, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 8"}
+    {"id": "GMC_FUEL_INJ_CYL_8",         "path": "Fuel", "fmt": { "len": 16, "max": 65.53,             "div": 1000,  "unit": "milliseconds" }, "name": "Fuel injection, cylinder 8"},
+    {"id": "GMC_FUEL_INJECTION_C8_DA11", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "mul": 10, "div": 10000, "unit": "milliseconds" }, "name": "Fuel injection, cylinder 8"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "20E3"}, "freq": 1,
   "signals": [
@@ -2461,8 +2461,8 @@
   ]},
 { "hdr": "DA1D", "dbg": true, "cmd": {"22": "33E5"}, "freq": 10,
   "signals": [
-    {"id": "GMC_12V_V",   "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "12V battery voltage",  "suggestedMetric": "starterBatteryVoltage",            "description": "12 V system voltage from the Drive Motor Control Module (matches Chevrolet-Equinox-EV DA1D 2233E5). Note: LYRIQ command_support docs list this DID as HV pack voltage - on-vehicle it reads 13.1-13.9 V under DC-DC float and does not track pack voltage."},
-    {"id": "GMC_HVBAT_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "DMCM battery voltage", "description": "From the Drive Motor Control Module."}
+    {"id": "GMC_12V_V",      "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "12V battery voltage",  "suggestedMetric": "starterBatteryVoltage",            "description": "12 V system voltage from the Drive Motor Control Module (matches Chevrolet-Equinox-EV DA1D 2233E5). Note: LYRIQ command_support docs list this DID as HV pack voltage - on-vehicle it reads 13.1-13.9 V under DC-DC float and does not track pack voltage."},
+    {"id": "GMC_HVBAT_V_V2", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "DMCM battery voltage", "description": "From the Drive Motor Control Module."}
   ]},
 { "hdr": "DA28", "rax": "2AF128", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "4A7A"}, "freq": 0.25,
   "signals": [
