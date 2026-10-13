@@ -9,6 +9,7 @@
     { "hdr": "DA11", "rax": "2AF111", "type": "engine" },
     { "hdr": "DA18",                  "type": "transmission" },
     { "hdr": "DA18", "rax": "2AF118", "type": "transmission" },
+    { "hdr": "DA1A",                  "type": "cluster" },
     { "hdr": "DA1A", "rax": "2AF11A", "type": "cluster" },
     { "hdr": "DA28",                  "type": "abs" },
     { "hdr": "DA28", "rax": "2AF128", "type": "abs" },
@@ -2103,9 +2104,9 @@
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "153E"}, "freq": 5,
   "signals": [
-    {"id": "GMC_EOT_DA11_3", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
-    {"id": "GMC_EOT_2_V2",   "path": "Engine", "fmt": { "len": 8, "max": 215,             "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
-    {"id": "GMC_EOT_V2",     "path": "Engine", "fmt": { "len": 8, "max": 215,             "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "GMC_EOT_DA11_3",    "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
+    {"id": "GMC_EOT_DA11_2_V2", "path": "Engine", "fmt": { "len": 8, "max": 215,             "add": -40, "unit": "celsius" }, "name": "Engine oil temperature"},
+    {"id": "GMC_EOT_V2",        "path": "Engine", "fmt": { "len": 8, "max": 215,             "add": -40, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
   ]},
 { "hdr": "DA11", "rax": "2AF111", "pri": "14", "fcm1": true, "dbg": true, "cmd": {"22": "1564"}, "freq": 1,
   "signals": [
