@@ -2548,23 +2548,23 @@
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "5005"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_FL_DA40",      "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "GMC_2500_TP_FL_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+    {"id": "GMC_TP_FL_DA40",       "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "GMC_CARGO_TP_FL_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "5006"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_FR_DA40",      "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
-    {"id": "GMC_2500_TP_FR_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+    {"id": "GMC_TP_FR_DA40",       "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "GMC_CARGO_TP_FR_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "5007"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_RR_DA40",      "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"},
-    {"id": "GMC_2500_TP_RR_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+    {"id": "GMC_TP_RR_DA40",       "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"},
+    {"id": "GMC_CARGO_TP_RR_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "5008"}, "freq": 15,
   "signals": [
-    {"id": "GMC_TP_RL_DA40",      "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "GMC_2500_TP_RL_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+    {"id": "GMC_TP_RL_DA40",       "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16,               "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "GMC_CARGO_TP_RL_DA40", "path": "Tires", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
 { "hdr": "DACB", "dbg": true, "cmd": {"22": "27C6"}, "freq": 0.5,
   "signals": [
