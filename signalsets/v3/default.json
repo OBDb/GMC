@@ -2521,15 +2521,15 @@
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "4124"}, "freq": 5,
   "signals": [
-    {"id": "GMC_HVBAT_T_B", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery temperature sensor B"}
+    {"id": "GMC_HVBAT_T_B", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery temperature sensor B", "description": "Holds one value per session on a 2025 LYRIQ rather than tracking temperature: 0x01A2 (13.06 C) on every sample of a drive and of a 9 h charge to 100 % three days later, while 40E5 and 40E6 rose by several degrees; an earlier session read 0x03DC (30.9 C). Possibly a value latched at wake. Hidden so it is not read as a live pack temperature.", "hidden": true}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "4127"}, "freq": 5,
   "signals": [
-    {"id": "GMC_HVBAT_T_A", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery temperature sensor A"}
+    {"id": "GMC_HVBAT_T_A", "path": "Battery", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "celsius" }, "name": "Traction battery temperature sensor A", "description": "Not live on a 2025 LYRIQ: read exactly 0x0418 (32.75 C) on every sample from August to late September 2026, across four multi-hour charges and a Ready dwell, while 40E5 and 40E6 moved. The 2025 capture in this repo reads 0x00EA (7.31 C), so it is not a fixed constant either; meaning unknown. Hidden so it is not read as a live pack temperature.", "hidden": true}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "4149"}, "freq": 5,
   "signals": [
-    {"id": "GMC_EVSE_PILOT_C", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 10, "unit": "amps" }, "name": "Charge station pilot current", "description": "J1772 pilot-advertised AC current limit. Read 38.8 A on a 9.2 kW EVSE while plugged; snaps to a 10.0 A default when unplugged."}
+    {"id": "GMC_EVSE_PILOT_C", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 10, "unit": "amps" }, "name": "Charge station pilot current", "description": "Matches the J1772 pilot-advertised AC current limit with the car awake: 38.8 A on a 9.2 kW EVSE while plugged, snapping to a 10.0 A default when unplugged. During an unattended overnight AC charge it read 16.0 A and later 9.6 A while charging at about 7.9 kW DC (roughly 9.4 kW AC, about 39 A at 240 V, more than either reading allows), so in that low-power wake mode it does not track the pilot."}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "416C"}, "freq": 5,
   "signals": [
@@ -2541,11 +2541,11 @@
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "416E"}, "freq": 5,
   "signals": [
-    {"id": "GMC_HVBAT_GRP3_V", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 100, "unit": "volts" }, "name": "Traction battery group 3 voltage", "description": "~51 V battery groups; rise under charge, fall under load, and read 0 with the vehicle off (live measurements behind the contactors)."}
+    {"id": "GMC_HVBAT_GRP3_V", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 100, "unit": "volts" }, "name": "Traction battery group 3 voltage", "description": "~51 V battery groups; they moved with charge and load (51.14 V charging, 50.98 V idle) and read 0 with the vehicle off. During an unattended overnight AC charge the group 1 voltage read 0, then held 51.08 V for 3 h of ~21 A charging, so they are not live in every wake mode."}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "434F"}, "freq": 5,
   "signals": [
-    {"id": "GMC_HVBAT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Traction battery temperature", "description": "Same encoding as Chevy Bolt 7E4 22434F."}
+    {"id": "GMC_HVBAT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "unit": "celsius" }, "name": "Traction battery temperature", "description": "Same encoding as Chevy Bolt 7E4 22434F. Raw 0x00 (-40 C) means no reading: during an unattended AC charge it was 0x00 in 644 of 710 replies, with the rest between 3 and 30 C."}
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "448F"}, "freq": 30,
   "signals": [
